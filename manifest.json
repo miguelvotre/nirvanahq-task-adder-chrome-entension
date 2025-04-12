@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Nirvana Task Adder",
+    "version": "1.0",
+    "description": "Adiciona páginas como tarefas ou apenas tarefas no Nirvana",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs"
+    ],
+    "action": {
+      "default_popup": "popup/popup.html"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
