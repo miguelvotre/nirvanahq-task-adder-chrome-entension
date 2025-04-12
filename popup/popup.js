@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.storage.local.get(['authToken', 'userEmail'], (result) => {
         if (result.authToken) {
             loginForm.innerHTML = `
-                <h2>Adicionar Tarefa</h2>
-                <p>Logado como: ${result.userEmail}</p>
+                <h2>Add Task</h2>
+                <p>Logged in as: ${result.userEmail}</p>
                 <div class="checkbox-wrapper">
                     <input type="checkbox" id="add-page-check" checked>
-                    <label for="add-page-check">Adicionar página atual</label>
+                    <label for="add-page-check">Add current page</label>
                 </div>
-                <input type="text" id="task-title" placeholder="Título da tarefa">
-                <textarea id="task-notes" placeholder="Notas (opcional)"></textarea>
-                <button id="add-task-btn">Adicionar Tarefa</button>
-                <button id="logout-btn">Sair</button>
+                <input type="text" id="task-title" placeholder="Task title">
+                <textarea id="task-notes" placeholder="Notes (optional)"></textarea>
+                <button id="add-task-btn">Add Task</button>
+                <button id="logout-btn" style="margin-top: 10px; background-color: #dc3545;">Logout</button>
             `;
 
             // Handler do checkbox
@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 try {
                     const title = titleInput.value.trim();
                     if (!title) {
-                        throw new Error('Por favor, insira um título para a tarefa');
+                        throw new Error('Please enter a task title');
                     }
 
                     addTaskBtn.disabled = true;
-                    addTaskBtn.textContent = 'Adicionando...';
+                    addTaskBtn.textContent = 'Adding...';
 
                     await nirvana.createTask(
                         result.authToken,
@@ -75,17 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     titleInput.value = '';
                     notesInput.value = '';
                     checkbox.checked = false; // Desmarcar checkbox
-                    addTaskBtn.textContent = '✓ Tarefa Adicionada!';
+                    addTaskBtn.textContent = '✓ Task Added!';
                     addTaskBtn.classList.add('success'); // Adiciona classe para mudar cor
                     setTimeout(() => {
-                        addTaskBtn.textContent = 'Adicionar Tarefa';
+                        addTaskBtn.textContent = 'Add Task';
                         addTaskBtn.classList.remove('success'); // Remove classe
                         addTaskBtn.disabled = false;
                     }, 2000);
 
                 } catch (error) {
                     alert(error.message);
-                    addTaskBtn.textContent = 'Adicionar Tarefa';
+                    addTaskBtn.textContent = 'Add Task';
                     addTaskBtn.disabled = false;
                 }
             });
@@ -108,13 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loginBtn.addEventListener('click', async () => {
         try {
             loginBtn.disabled = true;
-            loginBtn.textContent = 'Entrando...';
+            loginBtn.textContent = 'Logging in...';
 
             const email = emailInput.value;
             const password = passwordInput.value;
 
             if (!email || !password) {
-                throw new Error('Por favor, preencha todos os campos');
+                throw new Error('Please fill in all fields');
             }
 
             const token = await nirvana.login(email, password);
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         } catch (error) {
-            alert(error.message || 'Falha no login. Tente novamente.');
+            alert(error.message || 'Fail to login. Try again.');
         } finally {
             loginBtn.disabled = false;
             loginBtn.textContent = 'Login';

@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Nirvana Task Adder",
     "version": "1.0",
-    "description": "Adiciona páginas como tarefas ou apenas tarefas no Nirvana",
+    "description": "Add pages as tasks or just tasks in Nirvana",
     "permissions": [
       "activeTab",
       "storage",

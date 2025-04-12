@@ -1,39 +1,40 @@
-# Nirvana Task Adder - Extensão Chrome
+# Nirvana Task Adder - Chrome Extension
 
-Uma extensão para o Google Chrome que permite adicionar tarefas rapidamente ao Nirvana HQ.
+A Chrome extension that allows you to quickly add tasks or pages as tasks to Nirvana HQ.
 
-## Funcionalidades
+## Features
 
-- Login na conta Nirvana
-- Adicionar novas tarefas com ou sem páginas
-- Interface simples e intuitiva
+- Nirvana account login
+- Add new tasks with or without page content
+- Add current page as a task
+- Simple and intuitive interface
 
-## Como instalar
+## Installation
 
-1. Clone este repositório
-2. Abra o Chrome e vá para `chrome://extensions/`
-3. Ative o "Modo do desenvolvedor"
-4. Clique em "Carregar sem compactação"
-5. Selecione a pasta do projeto
+1. Clone this repository
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable "Developer mode"
+4. Click "Load unpacked"
+5. Select the project folder
 
-## Desenvolvimento
+## Development
 
-Para contribuir com o desenvolvimento:
+To contribute to development:
 
-1. Fork este repositório
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Licença
+## License
 
-Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo
-sob os termos da GNU General Public License conforme publicada pela
-Free Software Foundation, seja a versão 3 da Licença, ou
-(a seu critério) qualquer versão posterior.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-Este programa é distribuído na esperança de que seja útil,
-mas SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de
-COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja o
-arquivo LICENSE para mais detalhes. 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+LICENSE file for more details. 

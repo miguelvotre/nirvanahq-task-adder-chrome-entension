@@ -115,7 +115,7 @@ class NirvanaAPI {
 
             return data;
         } catch (error) {
-            throw new Error('Falha ao criar tarefa: ' + error.message);
+            throw new Error('Fail to create task: ' + error.message);
         }
     }
 }
